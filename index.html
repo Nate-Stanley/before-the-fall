@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Before the Fall: Community-Based STEADI Screening to Identify Hidden Fall Risk Before ED Presentation. Pilot implementation study, OHSU.">
+<meta name="theme-color" content="#1A4480">
+<link rel="canonical" href="https://nate-stanley.github.io/before-the-fall/">
+<title>Before the Fall — STEADI Pilot Study | OHSU</title>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nate-stanley.github.io/before-the-fall/">
+<meta property="og:title" content="Before the Fall — STEADI Pilot Study | OHSU">
+<meta property="og:description" content="Community-based STEADI screening identified substantial, often underrecognized fall risk before ED presentation.">
+<meta property="og:image" content="https://nate-stanley.github.io/before-the-fall/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Before the Fall — STEADI Pilot Study | OHSU">
+<meta name="twitter:description" content="Community-based STEADI screening identified substantial, often underrecognized fall risk before ED presentation.">
+<meta name="twitter:image" content="https://nate-stanley.github.io/before-the-fall/img/og-image.jpg">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600;1,8..60,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1A4480;
+  --navy-dark:#0E294F;
+  --blue:#2962A8;
+  --steel:#6B9FC7;
+  --gold:#F2AA28;
+  --gold-dark:#D4930F;
+  --bg:#F3F7FB;
+  --card:#FFFFFF;
+  --text:#1D2D3D;
+  --muted:#5B7188;
+  --line:#D4E1EF;
+  --pale:#EEF5FB;
+  --max:940px;
+  --radius:16px;
+  --radius-sm:12px;
+  --shadow:0 10px 28px rgba(16,44,84,.075);
+  --shadow-soft:0 4px 16px rgba(16,44,84,.055);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:100%;scroll-behavior:smooth;}
+body{font-family:"Source Sans 3",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.0625rem;color:var(--text);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:rgba(26,68,128,.34);transition:color .15s ease,text-decoration-color .15s ease;}
+a:hover{color:var(--blue);text-decoration-color:currentColor;}
+p{margin:0 0 1rem;}p:last-child{margin-bottom:0;}
+.container{max-width:var(--max);margin:0 auto;padding:0 22px;}
+.skip-link{position:absolute;left:-999px;top:10px;background:#fff;color:var(--navy);padding:10px 14px;border-radius:8px;z-index:100;}
+.skip-link:focus{left:10px;}
+
+/* HERO */
+.hero{position:relative;color:#fff;background-image:linear-gradient(90deg,rgba(5,18,42,.985) 0%,rgba(5,18,42,.94) 25%,rgba(7,28,61,.62) 49%,rgba(7,28,61,.18) 77%,rgba(7,28,61,.04) 100%),linear-gradient(0deg,rgba(5,18,42,.72) 0%,rgba(5,18,42,.22) 40%,rgba(5,18,42,0) 72%),url("img/hero-desktop.jpg");background-size:cover;background-position:center top;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 12% 34%,rgba(107,159,199,.12),transparent 38%),radial-gradient(ellipse at 84% 15%,rgba(242,170,40,.08),transparent 36%);pointer-events:none;}
+.hero > .container{max-width:none;margin:0;padding-left:clamp(52px,5.6vw,108px);padding-right:clamp(28px,5vw,92px);}
+.hero-inner{position:relative;z-index:2;min-height:690px;display:flex;flex-direction:column;justify-content:center;padding:56px 0 64px;max-width:900px;}
+.hero-brand{display:flex;flex-direction:row;align-items:center;gap:16px;margin-bottom:34px;}
+.hero-logo-wrap{background:transparent;border-radius:0;padding:0;box-shadow:none;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.hero-logo{height:58px;width:auto;display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.24));}
+.hero-brand-text{display:block;font-size:.88rem;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);font-weight:900;line-height:1.42;}
+.hero-brand-text::after{content:"";display:block;width:176px;height:2px;background:linear-gradient(90deg,var(--gold),rgba(242,170,40,.12));margin-top:13px;}
+.hero h1{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-size:clamp(4.7rem,7.8vw,7.05rem);font-weight:700;line-height:.91;letter-spacing:-.055em;margin-bottom:17px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.18);}
+.hero h1 em{font-style:italic;color:rgba(255,255,255,.88);}
+.hero-subtitle{font-size:clamp(1.26rem,2.05vw,1.58rem);font-weight:600;color:rgba(255,255,255,.9);max-width:790px;line-height:1.2;margin-bottom:24px;}
+.hero-finding{font-size:clamp(1.10rem,1.45vw,1.25rem);max-width:780px;line-height:1.38;color:#fff;margin-bottom:25px;font-weight:500;}
+.hero-finding strong{color:var(--gold);font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:rgba(242,170,40,.55);}
+.author-line{font-size:1.03rem;color:rgba(255,255,255,.82);margin-bottom:24px;line-height:1.78;}
+.author-line a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18);}
+.author-line a:hover{border-bottom-color:rgba(255,255,255,.65);}
+.author-line .presenter,.author-line .pi{color:#fff;font-weight:900;}
+.author-role{color:var(--gold);font-weight:600;font-style:italic;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;}
+.hero-actions .btn{min-width:245px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:15px 28px;border-radius:11px;font-size:1.03rem;font-weight:900;text-decoration:none;border:1.5px solid transparent;transition:transform .1s ease,background .15s ease,border-color .15s ease,box-shadow .15s ease;}
+.btn:hover{transform:translateY(-1px);}
+.hero-actions .btn::after{content:"→";font-size:1.25em;line-height:1;margin-left:8px;}
+.btn-primary{background:var(--gold);color:#0B2447;box-shadow:0 10px 26px rgba(0,0,0,.22);}
+.btn-primary:hover{background:#ffd064;color:#0B2447;text-decoration:none;}
+.btn-ghost{background:rgba(4,18,42,.22);border-color:rgba(242,170,40,.92);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;}
+.hero-rule{position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));z-index:3;}
+
+/* DESKTOP NAV */
+.desktop-nav{display:none;}
+@media(min-width:1220px){
+  .desktop-nav{display:flex;flex-direction:column;gap:4px;position:fixed;right:calc((100vw - var(--max))/2 - 190px);top:190px;width:170px;z-index:20;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  .desktop-nav.nav-visible{opacity:1;pointer-events:auto;}
+  .desktop-nav a{display:block;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:rgba(26,68,128,.48);padding:6px 0 6px 14px;border-left:2px solid transparent;font-weight:800;}
+  .desktop-nav a:hover,.desktop-nav a.active{color:var(--navy);border-left-color:var(--gold);}
+  .nav-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(26,68,128,.36);padding-left:14px;margin-bottom:6px;font-weight:800;}
+}
+
+/* SECTIONS */
+main{position:relative;z-index:1;}
+section{padding:46px 0 0;}
+section:last-of-type{padding-bottom:42px;}
+.section-label{display:inline-block;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);font-weight:900;padding-bottom:8px;border-bottom:2px solid var(--gold);margin-bottom:22px;}
+.section-intro{color:var(--muted);font-size:1.05rem;max-width:780px;margin-bottom:20px;}
+
+/* QUICK ACTION BAR */
+.quick-actions{background:var(--navy);color:#fff;padding:20px 0;box-shadow:0 12px 30px rgba(16,44,84,.12);}
+.quick-actions-inner{display:flex;flex-wrap:wrap;align-items:center;gap:12px;}
+.quick-label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);font-weight:900;margin-right:4px;}
+.quick-actions .btn{min-height:42px;padding:10px 16px;font-size:.98rem;}
+.quick-actions .btn-primary{box-shadow:none;}
+.quick-actions .btn-ghost{background:rgba(255,255,255,.09);}
+
+/* CARDS AND GRIDS */
+.findings-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.finding{position:relative;overflow:hidden;background:var(--card);border-radius:var(--radius);padding:24px 21px 21px;box-shadow:var(--shadow);border:1px solid rgba(212,225,239,.82);min-height:166px;display:flex;flex-direction:column;justify-content:flex-start;}
+.finding::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--navy);}
+.finding .num{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;display:block;font-size:3.18rem;line-height:.92;color:var(--navy);letter-spacing:-.045em;margin-bottom:11px;font-weight:700;}
+.finding .lbl{font-size:1.04rem;font-weight:900;color:var(--text);line-height:1.24;margin-bottom:7px;}
+.finding .sub{font-size:.92rem;color:var(--muted);font-style:italic;line-height:1.25;}
+.glance-card,.callout,.note-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(212,225,239,.76);}
+.glance-card{padding:26px;}
+.glance-card dl{display:grid;grid-template-columns:120px 1fr;gap:13px 22px;}
+.glance-card dt{font-weight:900;color:var(--navy);}
+.glance-card dd{color:var(--text);}
+.callout{position:relative;overflow:hidden;padding:32px 30px 28px;background:var(--card);}
+.callout::before{content:"";position:absolute;top:0;left:0;right:0;height:7px;background:var(--navy);}
+.callout p{line-height:1.58;}
+.callout p:first-child{font-size:1.08rem;}
+.callout strong{color:var(--navy);font-weight:900;}
+
+/* PATHWAY MOTIF */
+.pathway{background:var(--card);border:1px solid rgba(212,225,239,.76);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-top:8px;}
+.pathway-title{font-size:.98rem;letter-spacing:.02em;color:var(--navy);font-weight:900;margin-bottom:18px;}
+.pathway-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:start;position:relative;}
+.pathway-step{position:relative;text-align:center;padding:0 8px;}
+.pathway-step:not(:last-child)::after{content:"";position:absolute;top:19px;right:-50%;width:100%;height:2px;background:rgba(26,68,128,.20);z-index:0;}
+.pathway-node{position:relative;z-index:1;width:40px;height:40px;border-radius:999px;background:var(--navy);margin:0 auto 10px;display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 0 0 6px #fff;}
+.pathway-step:nth-child(3) .pathway-node{background:var(--navy);color:#fff;box-shadow:0 0 0 5px #fff,0 0 0 8px rgba(242,170,40,.78);}
+.pathway-label{font-size:.92rem;font-weight:900;color:var(--navy);line-height:1.15;margin-bottom:3px;}
+.pathway-sub{font-size:.8rem;color:var(--muted);font-style:italic;line-height:1.2;}
+
+/* DETAILS */
+details.disclosure{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(212,225,239,.76);overflow:hidden;}
+details.disclosure+details.disclosure{margin-top:14px;}
+details.disclosure summary{cursor:pointer;list-style:none;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:1.08rem;font-weight:900;color:var(--navy);}
+details.disclosure summary::-webkit-details-marker{display:none;}
+details.disclosure summary::after{content:"+";color:var(--gold-dark);font-size:1.6rem;line-height:1;font-weight:900;}
+details.disclosure[open] summary::after{content:"−";}
+details.disclosure[open] summary{border-bottom:1px solid var(--line);}
+.disclosure-body{padding:24px;}
+.text-btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(26,68,128,.28);border-radius:999px;padding:8px 13px;text-decoration:none;font-weight:900;background:#fff;color:var(--navy);}
+.text-btn:hover{border-color:var(--gold);text-decoration:none;}
+.abstract-pdf-link{margin:-6px 0 18px;}
+.methods-list{list-style:none;display:grid;gap:12px;}
+.methods-list li{padding-left:18px;position:relative;}
+.methods-list li::before{content:"";position:absolute;left:0;top:.66em;width:7px;height:7px;border-radius:50%;background:var(--gold);}
+.methods-note{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-style:italic;}
+.abstract-card{font-size:1rem;line-height:1.65;}
+.abs-title{font-weight:900;color:var(--navy);font-size:1.08rem;margin-bottom:3px;}
+.abs-authors{font-style:italic;color:var(--muted);font-size:.98rem;margin-bottom:22px;}
+.abs-section{margin-bottom:18px;}
+.abs-section-label{display:block;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:900;margin-bottom:5px;}
+sup{font-size:.68em;color:var(--blue);font-weight:700;}
+.abs-refs{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);}
+.abs-refs ol,.refs-list{padding-left:22px;color:var(--muted);font-size:.95rem;line-height:1.55;}
+.abs-refs li,.refs-list li{margin-bottom:8px;}
+
+/* VIDEOS */
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.video-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(212,225,239,.72);}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;background:#0A1F42;}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.video-caption{padding:14px 16px;font-size:.96rem;color:var(--muted);line-height:1.35;}
+.video-caption strong{color:var(--navy);}
+
+/* RESOURCES */
+.resource-group{margin-bottom:28px;}
+.resource-group-label{display:block;font-size:.82rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:900;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--line);}
+.resource-list{list-style:none;display:grid;gap:10px;}
+.resource-list a{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;background:var(--card);border-radius:var(--radius);padding:15px 16px;text-decoration:none;box-shadow:var(--shadow-soft);border:1px solid rgba(212,225,239,.76);}
+.resource-list a:hover{box-shadow:var(--shadow);border-color:rgba(242,170,40,.42);transform:translateY(-1px);}
+.resource-icon{width:24px;height:24px;border-radius:999px;border:2px solid var(--steel);display:grid;place-items:center;color:var(--navy);font-size:.75rem;font-weight:900;margin-top:2px;}
+.r-title{display:block;color:var(--navy);font-weight:900;margin-bottom:2px;}
+.r-desc{display:block;color:var(--muted);font-style:italic;font-size:.92rem;line-height:1.35;}
+
+
+/* TOOLKIT */
+.toolkit-feature{position:relative;overflow:hidden;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(212,225,239,.76);padding:24px;margin-bottom:16px;}
+.toolkit-feature::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--navy);}
+.toolkit-feature-title{font-size:1.18rem;font-weight:900;color:var(--navy);margin-bottom:5px;line-height:1.2;}
+.toolkit-feature-desc{color:var(--muted);font-size:1rem;max-width:760px;margin-bottom:14px;}
+.toolkit-actions{display:flex;flex-wrap:wrap;gap:10px;}
+.toolkit-list{list-style:none;display:grid;gap:10px;}
+.toolkit-list a{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:#fff;border-radius:var(--radius-sm);padding:14px 16px;text-decoration:none;border:1px solid rgba(212,225,239,.78);box-shadow:var(--shadow-soft);}
+.toolkit-list a:hover{border-color:rgba(242,170,40,.46);box-shadow:var(--shadow);transform:translateY(-1px);}
+.toolkit-title{display:block;color:var(--navy);font-weight:900;line-height:1.2;margin-bottom:3px;}
+.toolkit-desc{display:block;color:var(--muted);font-size:.92rem;line-height:1.32;}
+.toolkit-link-label{font-size:.84rem;font-weight:900;color:var(--gold-dark);white-space:nowrap;}
+
+/* TEAM */
+.visible-team{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:16px;}
+.person-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(212,225,239,.76);padding:22px;display:grid;grid-template-columns:68px 1fr;gap:16px;align-items:start;}
+.avatar{width:68px;height:68px;border-radius:999px;background:linear-gradient(135deg,var(--steel),var(--navy));color:#fff;font-weight:900;font-size:1.25rem;display:grid;place-items:center;overflow:hidden;position:relative;flex:0 0 auto;}
+.avatar::before{content:attr(data-initials);position:absolute;z-index:1;}
+.avatar img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2;display:block;}
+.person-name{font-size:1.08rem;font-weight:900;color:var(--navy);line-height:1.15;margin-bottom:4px;}
+.person-role{font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:900;line-height:1.25;margin-bottom:4px;}
+.person-affil{font-size:.92rem;color:var(--muted);font-style:italic;line-height:1.3;margin-bottom:10px;}
+.person-bio{font-size:.98rem;line-height:1.45;margin-bottom:9px;}
+.person-links{font-size:.92rem;display:flex;gap:8px;flex-wrap:wrap;}
+.team-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+.team-grid .person-card{box-shadow:none;background:#fff;}
+.sep{color:var(--line);}
+
+/* ACKS / FOOTER */
+.acks-text{color:var(--muted);font-size:1.02rem;}
+.medical-note{font-size:.95rem;color:var(--muted);background:var(--card);border:1px solid rgba(212,225,239,.76);border-radius:var(--radius);padding:14px 16px;margin-top:18px;box-shadow:var(--shadow-soft);}
+footer{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:rgba(255,255,255,.76);padding:30px 0;margin-top:46px;position:relative;}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));}
+.footer-inner{display:flex;align-items:center;gap:18px;}
+.footer-logo-wrap{background:rgba(255,255,255,.94);border-radius:12px;padding:7px 10px;display:inline-flex;flex:0 0 auto;}
+.footer-logo{height:44px;width:auto;display:block;}
+.footer-copy p{margin-bottom:.45rem;}
+footer a{color:#fff;}
+.footer-small{font-size:.9rem;color:rgba(255,255,255,.66);margin-top:2px;}
+
+@media(max-width:900px){
+  .findings-grid{grid-template-columns:1fr;}
+  .visible-team{grid-template-columns:1fr;}
+  .video-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  body{font-size:1.04rem;line-height:1.52;}
+  .container{padding:0 18px;}
+  .hero{background-image:linear-gradient(180deg,rgba(5,18,42,.48) 0%,rgba(5,18,42,.62) 28%,rgba(5,18,42,.86) 60%,rgba(5,18,42,.98) 100%),url("img/hero-mobile.jpg");background-position:center top;}
+  .hero > .container{padding-left:22px;padding-right:22px;}
+  .hero-inner{min-height:690px;justify-content:flex-end;padding:32px 0 34px;max-width:none;}
+  .hero-brand{flex-direction:row;align-items:center;margin-bottom:22px;gap:12px;}
+  .hero-logo-wrap{border-radius:0;padding:0;}
+  .hero-logo{height:46px;}
+  .hero-brand-text{font-size:.74rem;letter-spacing:.10em;color:var(--gold);line-height:1.35;}
+  .hero-brand-text::after{width:132px;margin-top:10px;}
+  .hero h1{font-size:3.18rem;margin-bottom:12px;line-height:.94;}
+  .hero-subtitle{font-size:1.12rem;line-height:1.24;margin-bottom:16px;}
+  .hero-finding{font-size:1.03rem;line-height:1.42;margin-bottom:16px;}
+  .author-line{font-size:.98rem;margin-bottom:18px;}
+  .hero-actions{display:grid;grid-template-columns:1fr;width:100%;gap:14px;}
+  .hero-actions .btn{width:100%;min-width:0;min-height:54px;border-radius:11px;}
+  section{padding:40px 0 0;}
+  .section-label{font-size:.82rem;letter-spacing:.09em;margin-bottom:18px;}
+  .finding{padding:20px 22px 18px;min-height:136px;}
+  .finding .num{font-size:2.65rem;}
+  .glance-card{padding:22px 20px;}
+  .glance-card dl{grid-template-columns:1fr;gap:3px;}
+  .glance-card dt{margin-top:12px;}
+  .glance-card dt:first-child{margin-top:0;}
+  .pathway{padding:22px 18px;}
+  .pathway-row{grid-template-columns:1fr;gap:12px;}
+  .pathway-step{display:grid;grid-template-columns:42px 1fr;gap:12px;text-align:left;align-items:center;padding:0;}
+  .pathway-step:not(:last-child)::after{left:20px;right:auto;top:42px;width:2px;height:28px;background:rgba(26,68,128,.20);}
+  .pathway-node{margin:0;box-shadow:0 0 0 5px #fff;}
+  .video-grid{grid-template-columns:1fr;}
+  details.disclosure summary{padding:18px 20px;font-size:1.04rem;}
+  .disclosure-body{padding:20px;}
+  .visible-team{grid-template-columns:1fr;}
+  .person-card{grid-template-columns:56px 1fr;gap:14px;padding:18px;}
+  .avatar{width:56px;height:56px;font-size:1.05rem;}
+  .person-role{font-size:.78rem;letter-spacing:.03em;}
+  .resource-list a{grid-template-columns:24px 1fr;padding:14px;}
+  .toolkit-feature{padding:22px 18px;}
+  .toolkit-list a{grid-template-columns:1fr;padding:14px;}
+  .toolkit-link-label{margin-top:2px;}
+
+  .footer-inner{align-items:flex-start;gap:14px;}
+  .footer-logo{height:38px;}
+}
+@media print{
+  *{box-shadow:none!important;text-shadow:none!important;}
+  html,body{background:#fff!important;color:#111!important;font-size:11pt;}
+  .desktop-nav,.skip-link,footer,.video-wrap,script{display:none!important;}
+  .hero{background:#fff!important;color:#111!important;border-bottom:2px solid #1A4480;}
+  .hero::after,.hero-rule{display:none!important;}
+  .hero-inner{min-height:auto;padding:24px 0;}
+  .hero-logo-wrap{box-shadow:none!important;border:0!important;}
+  .hero-brand-text,.hero h1,.hero h1 em,.hero-subtitle,.hero-finding,.author-line,.author-role,.author-line a{color:#111!important;}
+  .hero h1{font-size:36pt;}
+  .hero-actions{display:none!important;}
+  section{padding:20px 0 0;break-inside:avoid;}
+  .findings-grid{grid-template-columns:repeat(4,1fr);gap:8px;}
+  .finding,.glance-card,.callout,.pathway,details.disclosure,.resource-list a,.toolkit-list a,.toolkit-feature,.person-card,.note-card{border:1px solid #ddd!important;background:#fff!important;break-inside:avoid;}
+  details.disclosure:not([open]) .disclosure-body{display:none!important;}
+  a{color:#111!important;text-decoration:underline;}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="desktop-nav" aria-label="Page sections">
+  <span class="nav-label">Contents</span>
+  <a href="#findings">Key Findings</a>
+  <a href="#overview">Overview</a>
+  <a href="#pathway">From Screening to Action</a>
+  <a href="#meaning">Why It Matters</a>
+  <a href="#details">Details</a>
+  <a href="#videos">Videos</a>
+  <a href="#toolkit">Toolkit</a>
+  <a href="#resources">More Resources</a>
+  <a href="#team">Team</a>
+  <a href="#acks">Acknowledgments</a>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-brand" aria-label="OHSU project identity">
+      <span class="hero-logo-wrap"><img class="hero-logo" src="img/ohsu-logo.png" alt="OHSU"></span>
+      <span class="hero-brand-text">Emergency Medicine Scholarship Day<br>Pilot Implementation Study</span>
+    </div>
+    <h1>Before <em>the</em> Fall</h1>
+    <p class="hero-subtitle">Community-Based STEADI Screening to Identify Hidden Fall Risk Before ED Presentation</p>
+    <p class="hero-finding">Among older adults who screened high-risk, <strong>1 in 2</strong> did not perceive elevated fall risk. Only <strong>45%</strong> of all participants had discussed fall prevention with a primary care provider in the prior year.</p>
+    <p class="author-line">
+      <a href="mailto:stanlnat@ohsu.edu" class="presenter">Nathaniel Stanley, BS</a><span class="author-role"> · Presenting Author</span><br>
+      <a href="mailto:kea@ohsu.edu" class="pi">Bory Kea, MD, MCR, FACEP</a><span class="author-role"> · Principal Investigator</span>
+    </p>
+    <div class="hero-actions">
+      <a href="Poster.pdf" class="btn btn-primary">View Poster</a>
+      <a href="mailto:stanlnat@ohsu.edu" class="btn btn-ghost">Contact Presenter</a>
+    </div>
+  </div>
+  <div class="hero-rule"></div>
+</header>
+
+
+<main id="main">
+  <section id="findings">
+    <div class="container">
+      <div class="section-label">Key Findings</div>
+      <div class="findings-grid">
+        <div class="finding"><span class="num">66%</span><div class="lbl">met high-risk criteria</div><div class="sub">all participants, N=53; STEADI ≥4</div></div>
+        <div class="finding"><span class="num">1 in 2</span><div class="lbl">did not perceive elevated fall risk</div><div class="sub">among high-risk participants</div></div>
+        <div class="finding"><span class="num">45%</span><div class="lbl">discussed fall prevention with a PCP</div><div class="sub">all participants; prior year</div></div>
+        <div class="finding"><span class="num">83%</span><div class="lbl">had low concern about falling</div><div class="sub">among high-risk subgroup; FES-I ≤19</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview">
+    <div class="container">
+      <div class="section-label">Study at a Glance</div>
+      <div class="glance-card">
+        <dl>
+          <dt>Design</dt><dd>Pilot implementation study</dd>
+          <dt>Setting</dt><dd>4 walk-in urban community health events</dd>
+          <dt>Location</dt><dd>Portland, Oregon</dd>
+          <dt>Period</dt><dd>2023–2024</dd>
+          <dt>Sample</dt><dd>N=53 consented · mean age 74.6 years · 73% female</dd>
+          <dt>IRB</dt><dd>STUDY00026434</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="pathway">
+    <div class="container">
+      <div class="section-label">From Screening to Action</div>
+      <div class="pathway" aria-label="Community screening pathway">
+        <div class="pathway-title">Community screening pathway</div>
+        <div class="pathway-row">
+          <div class="pathway-step"><div class="pathway-node">1</div><div><div class="pathway-label">Community Event</div><div class="pathway-sub">walk-in health fair</div></div></div>
+          <div class="pathway-step"><div class="pathway-node">2</div><div><div class="pathway-label">STEADI Screening</div><div class="pathway-sub">evidence-based risk assessment</div></div></div>
+          <div class="pathway-step"><div class="pathway-node">3</div><div><div class="pathway-label">Identify Risk</div><div class="pathway-sub">flag for intervention</div></div></div>
+          <div class="pathway-step"><div class="pathway-node">4</div><div><div class="pathway-label">Motivational Interviewing</div><div class="pathway-sub">discuss goals and readiness</div></div></div>
+          <div class="pathway-step"><div class="pathway-node">5</div><div><div class="pathway-label">Education / Referral</div><div class="pathway-sub">tailored next steps</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="meaning">
+    <div class="container">
+      <div class="section-label">Why This Matters</div>
+      <div class="callout">
+        <p><strong>Community-based STEADI screening identified older adults with substantial, often underrecognized fall risk outside routine clinical care.</strong> These findings support community screening as a feasible upstream screening and intervention model for larger-scale effectiveness testing.</p>
+        <p>Future work will test whether community-based STEADI screening improves fall-prevention engagement, evidence-based intervention uptake, documented falls, and fall-related emergency department utilization, particularly in communities with high fall risk and limited access to primary care fall-prevention services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="container">
+      <div class="section-label">Study Details</div>
+      <details class="disclosure">
+        <summary>Screening &amp; Measures</summary>
+        <div class="disclosure-body">
+          <ul class="methods-list">
+            <li><strong>STEADI 12-item questionnaire</strong> — Score ≥4 classified as high fall risk.</li>
+            <li><strong>FES-I</strong> (Falls Efficacy Scale–International) — Score ≤19 indicated low concern about falling.</li>
+            <li><strong>Self-perceived fall-risk items</strong> — Single-item risk rating plus PCP fall-prevention discussion in the prior year.</li>
+            <li><strong>Performance battery</strong> — Timed Up and Go, 30-second sit-to-stand, 4-stage balance test, and orthostatic blood pressure.</li>
+            <li><strong>Follow-up survey</strong> — Administered at 3 and/or 6 months post-screening; 43.4% completed at least one survey.</li>
+          </ul>
+          <p class="methods-note">All enrolled participants received individualized, STEADI-guided fall-prevention education on-site. High-risk participants additionally received motivational interviewing and evidence-based referrals to community programs.</p>
+        </div>
+      </details>
+      <details class="disclosure">
+        <summary>Read the full abstract</summary>
+        <div class="disclosure-body abstract-card">
+          <div class="abs-title">Before the Fall: Community-Based STEADI Screening to Identify Hidden Fall Risk Before ED Presentation</div>
+          <div class="abs-authors">Nathaniel Stanley; Ren Rosz, MD; Hiroko Kiyoshi-Teo, PhD, RN; Sarah Gold, RN; Bory Kea, MD, MCR</div>
+          <p class="abstract-pdf-link"><a href="abstract.pdf" class="text-btn">View abstract PDF</a></p>
+          <div class="abs-section"><span class="abs-section-label">Background</span> Falls are the leading cause of emergency department (ED) visits for trauma among U.S. adults aged ≥65, and approximately one in four older adults fall each year.<sup>1</sup> Multifactorial and multiple-component interventions can reduce fall rates among community-dwelling older adults.<sup>2</sup> The CDC’s Stopping Elderly Accidents, Deaths, and Injuries (STEADI) initiative was developed as an evidence-based framework to screen, assess, and intervene for fall risk in clinical practice.<sup>3</sup> However, fall-prevention screening remains inconsistently integrated into primary care.<sup>4</sup> Community-based STEADI screening may extend fall-risk identification, education, and referral beyond primary care, creating an opportunity to reach high-risk older adults before injury or ED presentation.<sup>5</sup></div>
+          <div class="abs-section"><span class="abs-section-label">Objective</span> To: (1) determine whether community-based STEADI screening identifies older adults with underrecognized fall risk; (2) characterize gaps among objectively measured fall risk, self-perceived risk, and primary care fall-prevention engagement; and (3) deliver and assess uptake of individualized, risk-based fall-prevention education in this setting.</div>
+          <div class="abs-section"><span class="abs-section-label">Methods</span> We conducted a pilot implementation study at four walk-in urban community health events since November 2023. Adults aged ≥65 completed the 12-item STEADI fall-risk questionnaire, self-reported fall-risk perception items, and the Falls Efficacy Scale–International (FES-I). Participants then completed orthostatic blood pressure measurements and physical function testing, including the Timed Up and Go, 30-second sit-to-stand, and 4-stage balance test. Screening was followed by motivational interviewing and individualized, risk-based fall-prevention education. Scores ≥4 on the 12-item STEADI questionnaire were classified as high fall risk and scores ≤19 on the FES-I indicated low concern about falling.</div>
+          <div class="abs-section"><span class="abs-section-label">Results</span> Of 187 attendees, 135 were eligible and 53 consented to participate. Mean age was 74.6 years, and 73% were female. The mean STEADI score was 5.6 (SD 3.9). Of all participants, 66% screened as high fall risk and only 45% reported discussing fall prevention in the prior year. Half of high-risk participants (33% of all participants) did not perceive themselves to be at elevated risk. Despite objective high-risk status, 83% of high-risk participants had FES-I scores indicating low concern about falling. At least one follow-up survey was completed by 43.4% of participants.</div>
+          <div class="abs-section"><span class="abs-section-label">Limitations</span> As community health fair attendees, our sample likely represents a more ambulatory and independent subset of older adults, potentially underrepresenting those at highest risk and intersecting vulnerabilities. Limited resources for follow-up survey completion yielded lower response rates than anticipated, constraining longitudinal conclusions.</div>
+          <div class="abs-section"><span class="abs-section-label">Conclusions</span> Community-based STEADI screening identified substantial, often underrecognized fall risk among older adults, including individuals with limited recent primary care fall-prevention engagement. These findings suggest that community screening may serve as an upstream intercept point to identify hidden fall risk and provide evidence-based intervention before injury or ED presentation. Future work will expand screening to rural and high-burden communities and evaluate whether community-based STEADI improves fall-prevention engagement, evidence-based intervention uptake, and reduces fall-related ED utilization.</div>
+          <div class="abs-refs"><span class="abs-section-label">References</span>
+            <ol>
+              <li>Centers for Disease Control and Prevention. Facts About Falls. <a href="https://www.cdc.gov/falls/data-research/facts-stats/index.html" target="_blank" rel="noopener">cdc.gov/falls</a></li>
+              <li>Hopewell S, et al. Multifactorial and multiple component interventions for preventing falls in older people living in the community. <em>Cochrane Database Syst Rev.</em> 2018;7(7):CD012221.</li>
+              <li>Stevens JA, Phelan EA. Development of STEADI: a fall prevention resource for health care providers. <em>Health Promot Pract.</em> 2013;14(5):706–714.</li>
+              <li>Burns ER, et al. Primary care providers’ discussion of fall prevention approaches with their older adult patients. <em>Prev Med Rep.</em> 2018;9:149–152.</li>
+              <li>Karlsson L, et al. Outcomes of a physical therapist-led, statewide, community-based fall risk screening. <em>J Geriatr Phys Ther.</em> 2020;43(4):185–193.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="videos">
+    <div class="container">
+      <div class="section-label">Patient Education Videos</div>
+      <p class="section-intro">Educational videos from the OHSU Trauma Center fall prevention series. Practical guidance for older adults, caregivers, and clinicians.</p>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/sRNkl7xz_8I" title="Introducing Fall Prevention Exercise" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-caption"><strong>Introducing Fall Prevention Exercise</strong> · OHSU Trauma Center</div>
+        </div>
+        <div class="video-card">
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/TkR37uTiszg" title="Continuing Fall Prevention Conversations" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-caption"><strong>Continuing Fall Prevention Conversations</strong> · OHSU Trauma Center</div>
+        </div>
+      </div>
+      <p class="section-intro" style="margin-top:14px;font-size:.98rem;">More videos in this series at <a href="https://www.ohsu.edu/trauma-center/fall-prevention" target="_blank" rel="noopener">ohsu.edu/trauma-center/fall-prevention</a>.</p>
+    </div>
+  </section>
+
+
+  <section id="toolkit">
+    <div class="container">
+      <div class="section-label">Fall Prevention Toolkit</div>
+      <p class="section-intro">Curated materials for clinicians, older adults, families, and community partners. These resources include the event booklet used in OHSU community screening events and selected CDC STEADI tools for screening, assessment, education, and fall-prevention planning.</p>
+
+      <div class="toolkit-feature">
+        <div class="toolkit-feature-title">OHSU Fall Risk Assessment Event Booklet</div>
+        <p class="toolkit-feature-desc">Participant-facing booklet used during community fall-risk assessment events. Includes screening questions, functional assessment worksheets, and space for fall-prevention planning.</p>
+        <div class="toolkit-actions">
+          <a href="files/fall-risk-assessment-event-booklet.pdf" class="text-btn">View booklet PDF</a>
+        </div>
+      </div>
+
+      <details class="disclosure">
+        <summary>Clinician tools</summary>
+        <div class="disclosure-body">
+          <ul class="toolkit-list">
+            <li><a href="https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">STEADI Clinical Algorithm</span><span class="toolkit-desc">CDC workflow for fall-risk screening, assessment, intervention, patient education, and follow-up.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+            <li><a href="https://www.cdc.gov/steadi/media/pdfs/steadi-pocketguide-508.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">Provider Pocket Guide</span><span class="toolkit-desc">Concise provider reference for talking with older adults about falls, modifiable risks, and prevention planning.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+            <li><a href="https://www.cdc.gov/steadi/pdf/steadi-brochure-stayindependent-508.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">Stay Independent Questionnaire</span><span class="toolkit-desc">STEADI checklist that clinicians and patients can use to identify fall risk.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+            <li><a href="https://www.cdc.gov/steadi/hcp/clinical-resources/index.html#functional-assessments" target="_blank" rel="noopener"><span><span class="toolkit-title">Functional Assessment Tools</span><span class="toolkit-desc">CDC tools for the 30-second chair stand, 4-stage balance, Timed Up &amp; Go, and orthostatic blood pressure assessment.</span></span><span class="toolkit-link-label">Open CDC →</span></a></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="disclosure">
+        <summary>Patient &amp; family handouts</summary>
+        <div class="disclosure-body">
+          <ul class="toolkit-list">
+            <li><a href="https://www.cdc.gov/steadi/pdf/steadi-brochure-whatyoucando-508.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">What You Can Do to Prevent Falls</span><span class="toolkit-desc">CDC brochure for older adults with practical steps to reduce fall risk.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+            <li><a href="https://www.cdc.gov/steadi/pdf/steadi-brochure-checkforsafety-508.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">Check for Safety: Home Fall Prevention Checklist</span><span class="toolkit-desc">Practical checklist for identifying and reducing common fall hazards at home.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+            <li><a href="https://www.cdc.gov/steadi/pdf/steadi-caregiverbrochure.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">Family Caregiver Fall Prevention Guide</span><span class="toolkit-desc">CDC brochure for family caregivers with steps to help protect older adults from falls.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+            <li><a href="https://www.cdc.gov/steadi/pdf/steadi-brochure-postural-hypotension-508.pdf" target="_blank" rel="noopener"><span><span class="toolkit-title">Postural Hypotension: What It Is &amp; How to Manage It</span><span class="toolkit-desc">Patient-friendly CDC brochure on dizziness, blood pressure changes, and fall-risk management.</span></span><span class="toolkit-link-label">Open PDF →</span></a></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="container">
+      <div class="section-label">More Resources</div>
+      <div class="resource-group">
+        <ul class="resource-list">
+          <li><a href="https://www.cdc.gov/steadi/hcp/clinical-resources/index.html" target="_blank" rel="noopener"><span class="resource-icon">1</span><span><span class="r-title">CDC STEADI Clinical Resources</span><span class="r-desc">Full CDC collection of clinician-facing STEADI tools for screening, assessment, and intervention</span></span></a></li>
+          <li><a href="https://www.cdc.gov/steadi/patient-resources/index.html" target="_blank" rel="noopener"><span class="resource-icon">2</span><span><span class="r-title">CDC STEADI Patient &amp; Caregiver Resources</span><span class="r-desc">Educational materials and tools for older adults, families, caregivers, and community organizations</span></span></a></li>
+          <li><a href="https://www.ohsu.edu/trauma-center/fall-prevention" target="_blank" rel="noopener"><span class="resource-icon">3</span><span><span class="r-title">OHSU Trauma Center — Fall Prevention</span><span class="r-desc">OHSU fall-prevention programs, educational videos, and screening-event information</span></span></a></li>
+          <li><a href="https://www.oregon.gov/oha/ph/preventionwellness/safeliving/fallprevention/pages/index.aspx" target="_blank" rel="noopener"><span class="resource-icon">4</span><span><span class="r-title">Oregon Health Authority — Fall Prevention</span><span class="r-desc">Statewide fall-prevention programs, data, and professional resources</span></span></a></li>
+        </ul>
+      </div>
+      <p class="medical-note">This page is for research and educational purposes and is not a substitute for medical advice. People concerned about fall risk should speak with a clinician or local fall-prevention resource.</p>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <div class="section-label">Study Team</div>
+      <p class="section-intro">Primary study contacts are shown below. Additional collaborators and screening-event team members are listed in the expandable sections.</p>
+      <div class="visible-team">
+        <div class="person-card"><div class="avatar" data-initials="NS"><img src="img/stanley.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Nathaniel Stanley, BS</div><div class="person-role">Presenting Author · CPR-EM Research Intern</div><div class="person-affil">Center for Policy and Research in Emergency Medicine, OHSU</div><p class="person-bio">Research intern with OHSU CPR-EM contributing to community-based fall-prevention and emergency medicine research. Presenting author for the STEADI pilot.</p><div class="person-links"><a href="mailto:stanlnat@ohsu.edu">stanlnat@ohsu.edu</a><span class="sep">·</span><a href="https://www.linkedin.com/in/nathaniel-stanley" target="_blank" rel="noopener">LinkedIn</a></div></div></div>
+        <div class="person-card"><div class="avatar" data-initials="BK"><img src="img/kea.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Bory Kea, MD, MCR, FACEP</div><div class="person-role">Principal Investigator · Associate Professor</div><div class="person-affil">OHSU Department of Emergency Medicine</div><p class="person-bio">Emergency medicine physician-scientist and System Director of Emergency Medicine Research at OHSU. Her research focuses on acute-care transitions, risk stratification, and evidence-based care pathways from the emergency department to home.</p><div class="person-links"><a href="mailto:kea@ohsu.edu">kea@ohsu.edu</a><span class="sep">·</span><a href="https://www.ohsu.edu/providers/bory-kea-md-mcr-facep" target="_blank" rel="noopener">OHSU Profile</a><span class="sep">·</span><a href="https://www.researchgate.net/profile/Bory-Kea" target="_blank" rel="noopener">ResearchGate</a></div></div></div>
+      </div>
+
+      <details class="disclosure">
+        <summary>Research team</summary>
+        <div class="disclosure-body team-grid">
+          <div class="person-card"><div class="avatar" data-initials="RR"><img src="img/rosz.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Ren Rosz, MD</div><div class="person-role">Research Assistant</div><div class="person-affil">OHSU-PSU School of Public Health</div><p class="person-bio">Public health researcher contributing to community-engaged emergency medicine and fall-prevention research.</p><div class="person-links"><a href="mailto:rosz@ohsu.edu">rosz@ohsu.edu</a><span class="sep">·</span><a href="https://www.linkedin.com/in/renrosz" target="_blank" rel="noopener">LinkedIn</a></div></div></div>
+          <div class="person-card"><div class="avatar" data-initials="HK"><img src="img/kiyoshi.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Hiroko Kiyoshi-Teo, PhD, RN</div><div class="person-role">Co-Investigator · Assistant Professor</div><div class="person-affil">OHSU School of Nursing · Hartford Center of Gerontological Excellence</div><p class="person-bio">Nurse scientist focused on fall prevention, patient safety, and strategies to engage older adults in evidence-based prevention. Her work includes motivational interviewing approaches to support fall-prevention behavior change.</p><div class="person-links"><a href="mailto:kiyoshi@ohsu.edu">kiyoshi@ohsu.edu</a><span class="sep">·</span><a href="https://www.ohsu.edu/people/hiroko-kiyoshi-teo-phd-rn" target="_blank" rel="noopener">OHSU Profile</a><span class="sep">·</span><a href="https://www.researchgate.net/profile/Hiroko-Kiyoshi-Teo" target="_blank" rel="noopener">ResearchGate</a></div></div></div>
+          <div class="person-card"><div class="avatar" data-initials="SG"><img src="img/gold.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Sarah Gold, RN, BSN, CEN</div><div class="person-role">Adult Trauma Injury Prevention Coordinator</div><div class="person-affil">OHSU Trauma Program</div><p class="person-bio">Adult Trauma Injury Prevention Coordinator at OHSU, where she leads community injury-prevention initiatives including Stop the Bleed, fall-risk screening events, and firearm safety education. She founded the Oregon Injury Prevention Coalition and brings nearly 20 years of Level I trauma emergency nursing experience to community-based prevention work.</p><div class="person-links"><a href="mailto:golds@ohsu.edu">golds@ohsu.edu</a><span class="sep">·</span><a href="https://www.ohsu.edu/trauma-center/trauma-team" target="_blank" rel="noopener">OHSU Trauma Team</a></div></div></div>
+        </div>
+      </details>
+
+      <details class="disclosure">
+        <summary>Screening event & nursing team</summary>
+        <div class="disclosure-body team-grid">
+          <div class="person-card"><div class="avatar" data-initials="HW"><img src="img/wong.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Heather Wong, MHS, BSN, RN, TCRN</div><div class="person-role">Trauma Program Director</div><div class="person-affil">OHSU Trauma Program</div><p class="person-bio">Trauma Program Director with more than 28 years of emergency, critical care, and trauma nursing experience. Her background includes trauma program leadership, regional trauma-system support, and trauma education across DSTC, ATLS, DMEP, RTTDC, and TNCC.</p><div class="person-links"><a href="mailto:wonghe@ohsu.edu">wonghe@ohsu.edu</a><span class="sep">·</span><a href="https://www.ohsu.edu/trauma-center/trauma-team" target="_blank" rel="noopener">OHSU Trauma Team</a><span class="sep">·</span><a href="https://www.linkedin.com/in/heather-wong-0176b9204" target="_blank" rel="noopener">LinkedIn</a></div></div></div>
+          <div class="person-card"><div class="avatar" data-initials="JB"><img src="img/berryhill.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Jody Berryhill, RN, BSN, MN</div><div class="person-role">Trauma Program Coordinator</div><div class="person-affil">OHSU Trauma Program</div><p class="person-bio">Trauma Program Coordinator with more than 23 years of acute-care trauma nursing experience at OHSU, including staff nurse, charge nurse, and trauma coordinator roles. Her background includes trauma performance improvement, nursing education, and global health-focused nurse education.</p><div class="person-links"><a href="mailto:berryhij@ohsu.edu">berryhij@ohsu.edu</a><span class="sep">·</span><a href="https://www.ohsu.edu/trauma-center/trauma-team" target="_blank" rel="noopener">OHSU Trauma Team</a></div></div></div>
+          <div class="person-card"><div class="avatar" data-initials="RB"><img src="img/brown.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Rebecca “Becca” Brown, RN, BSN, MN, CCRN</div><div class="person-role">Trauma Program Coordinator</div><div class="person-affil">OHSU Trauma Program</div><p class="person-bio">Trauma Program Coordinator with 18 years of trauma nursing experience at OHSU. Her background includes trauma acute care, Trauma ICU practice, critical care certification, nursing education, Virtual ICU implementation, and Military–Civilian trauma program coordination.</p><div class="person-links"><a href="mailto:brownre@ohsu.edu">brownre@ohsu.edu</a><span class="sep">·</span><a href="https://www.ohsu.edu/trauma-center/trauma-team" target="_blank" rel="noopener">OHSU Trauma Team</a></div></div></div>
+          <div class="person-card"><div class="avatar" data-initials="NR"><img src="img/riley.jpg" alt="" onerror="this.style.display='none'" loading="lazy"></div><div><div class="person-name">Nicole B. Riley, BS</div><div class="person-role">Mil-Civ & Trauma Administrative Coordinator</div><div class="person-affil">OHSU Division of Trauma · OHSU Trauma Program</div><p class="person-bio">Administrative coordinator supporting OHSU trauma program operations and Military–Civilian partnerships. She helps coordinate AMCT3 and SMART program activities, supporting trauma education, readiness, and collaboration across multidisciplinary teams.</p><div class="person-links"><a href="mailto:rileyni@ohsu.edu">rileyni@ohsu.edu</a></div></div></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="acks">
+    <div class="container">
+      <div class="section-label">Acknowledgments</div>
+      <p class="acks-text">Screening events were funded by the OHSU Trauma Program. Study data were managed using REDCap (UL1TR002369). We thank OHSU CPR-EM, the OHSU School of Nursing, and the numerous volunteers who made these events possible.</p>
+    </div>
+  </section>
+
+  <section id="references">
+    <div class="container">
+      <div class="section-label">References</div>
+      <ol class="refs-list">
+        <li>CDC. <em>Facts About Falls.</em> <a href="https://www.cdc.gov/falls/data-research/facts-stats/" target="_blank" rel="noopener">cdc.gov/falls</a></li>
+        <li>Stevens JA, Phelan EA. Development of STEADI: a fall prevention resource for health care providers. <em>Health Promot Pract.</em> 2013;14(5):706–714.</li>
+        <li>Hopewell S, et al. Multifactorial and multiple component interventions for preventing falls in older people living in the community. <em>Cochrane Database Syst Rev.</em> 2018;7(7):CD012221.</li>
+        <li>Burns ER, et al. Older adult fall prevention practices among primary care providers. <em>Prev Med Rep.</em> 2018;9:149–152.</li>
+        <li>Karlsson L, et al. Community-based fall-risk screening. <em>J Geriatr Phys Ther.</em> 2020;43(4):185–193.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span class="footer-logo-wrap"><img class="footer-logo" src="img/ohsu-logo.png" alt="Oregon Health & Science University — OHSU"></span>
+    <div class="footer-copy">
+      <p>Center for Policy and Research in Emergency Medicine (CPR-EM) · Department of Emergency Medicine · School of Nursing · School of Public Health</p>
+      <p class="footer-small">Presented at OHSU EM Scholarship Day. For questions about this study, contact the presenting author at <a href="mailto:stanlnat@ohsu.edu">stanlnat@ohsu.edu</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var secs=document.querySelectorAll('section[id]');
+  var links=document.querySelectorAll('.desktop-nav a[href^="#"]');
+  var nav=document.querySelector('.desktop-nav');
+  var hero=document.querySelector('.hero');
+  if(!links.length||!nav)return;
+  function checkHero(){
+    if(!hero)return;
+    var heroBottom=hero.getBoundingClientRect().bottom;
+    if(heroBottom<0){nav.classList.add('nav-visible');}
+    else{nav.classList.remove('nav-visible');}
+  }
+  window.addEventListener('scroll',checkHero,{passive:true});
+  checkHero();
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.remove('active');});
+        var a=document.querySelector('.desktop-nav a[href="#'+e.target.id+'"]');
+        if(a)a.classList.add('active');
+      }
+    });
+  },{rootMargin:'-30% 0px -58% 0px'});
+  secs.forEach(function(s){obs.observe(s);});
+})();
+</script>
+<script data-goatcounter="https://nstanley.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
